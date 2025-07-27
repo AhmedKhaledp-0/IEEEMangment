@@ -5,7 +5,7 @@ import type { MetaArgs } from "react-router";
 
 export function meta({}: MetaArgs) {
   return [
-    { title: "IEEE BSU - Boise State University Student Branch" },
+    { title: "IEEE BSU - Beni Suef University Student Branch" },
     {
       name: "description",
       content:

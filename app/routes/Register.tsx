@@ -25,7 +25,7 @@ export function meta({}: MetaArgs) {
     { title: "Join IEEE BSU - Create Account" },
     {
       name: "description",
-      content: "Join the IEEE BSU community at Boise State University",
+      content: "Join the IEEE BSU community at Beni Suef University",
     },
   ];
 }

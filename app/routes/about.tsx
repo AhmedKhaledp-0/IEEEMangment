@@ -35,7 +35,7 @@ export function meta({}: MetaArgs) {
     { title: "About - IEEE BSU" },
     {
       name: "description",
-      content: "Learn about IEEE BSU and our mission at Boise State University",
+      content: "Learn about IEEE BSU and our mission at Beni Suef University",
     },
   ];
 }
