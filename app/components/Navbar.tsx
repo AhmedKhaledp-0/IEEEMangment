@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import ThemeToggle from "./ThemeToggle";
 import { Menu, X, Home, Users, Calendar, BookOpen } from "lucide-react";
+import logo from "../assets/IEEE.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <img
-                src="/app/assets/IEEE.png"
+                src={logo}
                 alt="IEEE Logo"
                 className="h-16 w-auto transition-transform duration-200 group-hover:scale-105 filter brightness-0 dark:filter-none dark:invert"
               />
