@@ -6,8 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { Provider } from "react-redux";
+import { useEffect } from "react";
 
 import type { Route } from "./+types/root";
+import Navbar from "./components/Navbar";
+import { store } from "./store/store";
+import { initializeTheme } from "./store/slices/themeSlice";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -42,7 +47,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  useEffect(() => {
+    store.dispatch(initializeTheme());
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <Navbar />
+      <Outlet />
+    </Provider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
