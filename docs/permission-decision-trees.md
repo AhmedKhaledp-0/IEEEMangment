@@ -5,6 +5,13 @@
 ### Profile Access Decision Tree
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[User requests profile access] --> B{Is user authenticated?}
     B --> |No| C[Redirect to login]
@@ -36,6 +43,13 @@ flowchart TD
 ### Rating Permission Decision Tree
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[User attempts to rate someone] --> B{User role check}
 
@@ -87,6 +101,13 @@ flowchart TD
 ### Committee Management Decision Tree
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[User requests committee action] --> B{Action type}
 

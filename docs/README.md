@@ -73,6 +73,13 @@ _Legend: ✅ Full Access, 🔸 Limited Access, ❌ No Access_
 ### Expected User Distribution
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: dark
+  themeVariables:
+    darkMode: true
+---
 pie title IEEE Branch User Distribution
     "Normal Members" : 70
     "HR Members" : 15

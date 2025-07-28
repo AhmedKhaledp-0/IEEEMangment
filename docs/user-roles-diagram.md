@@ -3,6 +3,13 @@
 ## Role Hierarchy Diagram
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TD
     A[High Board Member] --> B[Head Member]
     B --> C[HR Member]
@@ -22,6 +29,13 @@ graph TD
 ## Permissions Matrix
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph LR
     subgraph "Normal Member"
         NM1[View Profile]
@@ -64,6 +78,13 @@ graph LR
 ## System Architecture Flow
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[IEEE Management System] --> B[Authentication]
     B --> C{User Role?}
@@ -104,6 +125,13 @@ flowchart TD
 ## Data Access Patterns
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 erDiagram
     USERS ||--o{ COMMITTEES : "belongs_to"
     USERS ||--o{ ASSIGNMENTS : "has"

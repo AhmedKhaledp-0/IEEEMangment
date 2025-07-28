@@ -3,6 +3,13 @@
 ## Permission-Based Access Control
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TD
     A[User Login] --> B{Authentication}
     B --> |Success| C[Get User Role]
@@ -58,6 +65,13 @@ graph TD
 ## Data Flow Architecture
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: dark
+  themeVariables:
+    darkMode: true
+---
 sequenceDiagram
     participant U as User
     participant F as Frontend

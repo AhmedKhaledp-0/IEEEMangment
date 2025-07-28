@@ -5,6 +5,13 @@
 ### Normal Member Dashboard
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TB
     subgraph "Normal Member Dashboard"
         A[Header with IEEE Logo & Theme Toggle]
@@ -39,6 +46,13 @@ graph TB
 ### HR Member Dashboard
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TB
     subgraph "HR Member Dashboard"
         A[Header with IEEE Logo & Theme Toggle]
@@ -76,6 +90,13 @@ graph TB
 ### Head Member Dashboard
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TB
     subgraph "Head Member Dashboard"
         A[Header with IEEE Logo & Theme Toggle]
@@ -116,6 +137,13 @@ graph TB
 ### High Board Member Dashboard
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TB
     subgraph "High Board Member Dashboard"
         A[Header with IEEE Logo & Theme Toggle]
@@ -161,6 +189,13 @@ graph TB
 ### Assignment Management Flow
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[Head Member creates assignment] --> B[Assignment appears in member dashboard]
     B --> C[Member works on assignment]
@@ -183,6 +218,13 @@ flowchart TD
 ### Attendance Tracking Flow
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[Committee meeting scheduled] --> B[Members attend meeting]
     B --> C[HR Member records attendance]
@@ -202,6 +244,13 @@ flowchart TD
 ### Committee Creation Flow
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 flowchart TD
     A[High Board Member initiates committee creation] --> B[Fill committee details form]
     B --> C[Select committee head]
@@ -223,6 +272,13 @@ flowchart TD
 ### Mobile Layout
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph TB
     subgraph "Mobile View (320px - 768px)"
         A[Hamburger Menu]
@@ -249,6 +305,13 @@ graph TB
 ### Tablet Layout
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph LR
     subgraph "Tablet View (768px - 1024px)"
         A[Side Navigation Panel]
@@ -267,6 +330,13 @@ graph LR
 ### Desktop Layout
 
 ```mermaid
+---
+config:
+  layout: elk
+  theme: neutral
+  themeVariables:
+    darkMode: true
+---
 graph LR
     subgraph "Desktop View (1024px+)"
         A[Fixed Side Navigation]
