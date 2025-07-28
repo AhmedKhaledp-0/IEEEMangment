@@ -10,56 +10,66 @@ config:
   themeVariables:
     darkMode: true
 ---
-graph TD
-    A[User Login] --> B{Authentication}
-    B --> |Success| C[Get User Role]
-    B --> |Failure| D[Access Denied]
-
-    C --> E{Role Check}
-
-    E --> |Normal Member| F[Normal Permissions]
-    E --> |HR Member| G[HR Permissions]
-    E --> |Head Member| H[Head Permissions]
-    E --> |High Board| I[High Board Permissions]
-
-    F --> F1[✓ View Profile]
-    F --> F2[✓ View Assignments]
-    F --> F3[✓ View Committee]
-    F --> F4[✓ View Best Members]
-    F --> F5[✗ Rate Others]
-    F --> F6[✗ Add Members]
-    F --> F7[✗ Create Tasks]
-    F --> F8[✗ Manage Committees]
-
-    G --> G1[✓ All Normal Permissions]
-    G --> G2[✓ Rate Attendance]
-    G --> G3[✓ Add Behaviors]
-    G --> G4[✓ View Committee Members]
-    G --> G5[✗ Rate Assignments]
-    G --> G6[✗ Add Members]
-    G --> G7[✗ Create Committees]
-
-    H --> H1[✓ All HR Permissions]
-    H --> H2[✓ Rate Assignments]
-    H --> H3[✓ Add New Members]
-    H --> H4[✓ Assign Tasks]
-    H --> H5[✓ Create Posts]
-    H --> H6[✓ Make Meeting Agendas]
-    H --> H7[✗ Manage All Committees]
-    H --> H8[✗ Create Committees]
-
-    I --> I1[✓ All Head Permissions]
-    I --> I2[✓ View All Committees]
-    I --> I3[✓ Create General Agendas]
-    I --> I4[✓ Manage Events]
-    I --> I5[✓ Add New Committees]
-    I --> I6[✓ Rate Leadership]
-
+flowchart LR
+ subgraph F["Normal Permissions"]
+    direction TB
+        F1["✓ View Profile"]
+        F2["✓ View Assignments"]
+        F3["✓ View Committee"]
+        F4["✓ View Best Members"]
+        F5["✗ Rate Others"]
+        F6["✗ Add Members"]
+        F7["✗ Create Tasks"]
+        F8["✗ Manage Committees"]
+  end
+ subgraph G["HR Permissions"]
+    direction TB
+        G1["✓ All Normal Permissions"]
+        G2["✓ Rate Attendance"]
+        G3["✓ Add Behaviors"]
+        G4["✓ View Committee Members"]
+        G5["✗ Rate Assignments"]
+        G6["✗ Add Members"]
+        G7["✗ Create Committees"]
+  end
+ subgraph H["Head Permissions"]
+    direction TB
+        H1["✓ All HR Permissions"]
+        H2["✓ Rate Assignments"]
+        H3["✓ Add New Members"]
+        H4["✓ Assign Tasks"]
+        H5["✓ Create Posts"]
+        H6["✓ Make Meeting Agendas"]
+        H7["✗ Manage All Committees"]
+        H8["✗ Create Committees"]
+  end
+ subgraph I["High Board Permissions"]
+    direction TB
+        I1["✓ All Head Permissions"]
+        I2["✓ View All Committees"]
+        I3["✓ Create General Agendas"]
+        I4["✓ Manage Events"]
+        I5["✓ Add New Committees"]
+        I6["✓ Rate Leadership"]
+  end
+    A["User Login"] --> B{"Authentication"}
+    B -- Success --> C["Get User Role"]
+    B -- Failure --> D["Access Denied"]
+    C --> E{"Role Check"}
+    E -- Normal Member --> F
+    E L_E_G_0@-- HR Member --> G
+    E -- Head Member --> H
+    E -- High Board --> I
+     D:::Rose
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
     style A fill:#ffcdd2
     style F fill:#e8f5e8
     style G fill:#fff3e0
     style H fill:#f3e5f5
     style I fill:#e1f5fe
+    linkStyle 5 stroke:#000000,fill:none
+    L_E_G_0
+
 ```
 
 ## Data Flow Architecture
